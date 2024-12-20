@@ -11,6 +11,12 @@
 	<Page
 		title="{i18n>appTitle}"
 		id="page">
+		<subHeader>
+		<Toolbar >
+		<ToolbarSpacer />
+		<Button text="Create Product" type="Emphasized" press="onCreateProductPress"/>
+		</Toolbar>
+		</subHeader>
 		<content>
 			<VBox>
         <Table id="idTable" class="idTable" items="{/Workers}" growing="true" growingScrollToLoad="true" growingThreshold="18">
