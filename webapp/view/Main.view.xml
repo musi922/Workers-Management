@@ -14,7 +14,7 @@
 		<subHeader>
 		<Toolbar >
 		<ToolbarSpacer />
-		<Button text="Create Product" type="Emphasized" press="onCreateProductPress"/>
+		<Button text="Create Worker" type="Emphasized" press="onCreateProductPress"/>
 		</Toolbar>
 		</subHeader>
 		<content>
