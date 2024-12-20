@@ -51,7 +51,11 @@
 				"settings": {
 					"bundleName": "workersWebsite.i18n.i18n"
 				}
-			}
+			},
+			"": {
+            "type": "sap.ui.model.odata.v4.ODataModel",
+            "uri": "http://localhost:4004/odata/v4/workers/"
+         }
 		},
 
 		"routing": {

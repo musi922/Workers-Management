@@ -12,18 +12,51 @@
 		title="{i18n>appTitle}"
 		id="page">
 		<content>
-			<IllustratedMessage
-				title="{i18n>appTitle}"
-				illustrationType="sapIllus-SuccessHighFive"
-				enableVerticalResponsiveness="true"
-				description="{i18n>appDescription}">
-				<additionalContent>
-					<Button
-						id="helloButton"
-						text="{formatter: 'formatter.formatValue', path: 'i18n>btnText'}"
-						press="sayHello" />
-				</additionalContent>
-			</IllustratedMessage>
+			<VBox>
+        <Table id="idTable" class="idTable" items="{/Workers}" growing="true" growingScrollToLoad="true" growingThreshold="18">
+        <columns>
+            <Column>
+                <Text text="ID"/>
+            </Column>
+            <Column>
+                <Text text="First Name"/>
+            </Column>
+            <Column>
+                <Text text="Last Name"/>
+            </Column>
+            <Column>
+                <Text text="Email"/>
+            </Column>
+            <Column>
+                <Text text="Position"/>
+            </Column>
+            <Column>
+                <Text text="Salary"/>
+            </Column>
+           
+            <Column>
+                <Text text="Actions"/>
+            </Column>
+        </columns>
+        <items>
+            <ColumnListItem>
+                <cells>
+                <Text text="{ID}"/>
+                <Text text="{firstName}"/>
+                <Text text="{lastName}"/>
+                <Text text="{email}"/>
+                <Text text="{position}"/>
+                <Text text="{salary}"/>
+
+                    <HBox>
+                        <Button text="Edit" type="Default" press="onEditPress" />
+                        <Button text="Delete" press="onDeletePress" />
+                    </HBox>
+                </cells>
+            </ColumnListItem>
+        </items>
+    </Table>
+  </VBox>
 		</content>
 	</Page>
 

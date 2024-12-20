@@ -1,6 +1,6 @@
 specVersion: "4.0"
 metadata:
-  name: workersWebsite
+  name: workerswebsite
 type: application
 resources:
   configuration:
