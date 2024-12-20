@@ -1,4 +1,4 @@
-<mvc:View
+<mvc:View xmlns:form="sap.ui.layout.form"
 	controllerName="workersWebsite.controller.Main"
 	displayBlock="true"
 	xmlns="sap.m"
@@ -55,7 +55,6 @@
                 <Text text="{salary}"/>
 
                     <HBox>
-                        <Button text="Edit" type="Default" press="onEditPress" />
                         <Button text="Delete" press="onDeletePress" />
                     </HBox>
                 </cells>
@@ -64,6 +63,37 @@
     </Table>
   </VBox>
 		</content>
+
+		<Dialog id="createProduct"  title="Create a Product" class="createProduct">
+    <VBox>
+       <form:SimpleForm>
+    <Label text="Id"/>
+    <Input id="productIdInput" name="ID" required="true" valueState="None" valueStateText="Please enter a  ID"/>
+    
+    <Label text="First Name"/>
+    <Input id="productNameInput" name="Name" required="true" valueState="None" valueStateText="Please enter a First Name"/>
+    
+    <Label text="Last Name"/>
+    <Input id="productDescriptionInput" name="Description" required="true" valueState="None" valueStateText="Please enter a Last Name"/>
+    
+    <Label text="Email"/>
+    <Input id="productPriceInput" name="Price" required="true" valueState="None" valueStateText="Please enter a Email"/>
+    <Label text="Position"/>
+    <Input id="productPositionInput" name="Price"  required="true" valueState="None" valueStateText="Please enter a Position"/>
+    <Label text="Salary"/>
+    <Input id="Salary" name="Price"  required="true" valueState="None" valueStateText="Please enter a salary"/>
+    
+   
+      </form:SimpleForm>
+
+    </VBox>
+    <beginButton>
+        <Button text="Cancel" press="onCloseProductDialog"/>
+    </beginButton>
+    <endButton>
+        <Button text="Create" press="onCreateProduct" type="Emphasized"/>
+    </endButton>
+</Dialog>
 	</Page>
 
 </mvc:View>
